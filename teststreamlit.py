@@ -1,9 +1,13 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
-if st.checkbox("Show data frame"):
-  df = pd.DataFrame(
-  np.random.randn(20,3),
-  columns = ['a','b','c']
-  )
-  df
+
+df = pd.DataFrame({
+    'first column': [1, 2, 3, 4],
+    'second column': [10, 20, 30, 40]
+    })
+
+option = st.selectbox(
+    'Which number do you like best?',
+     df['first column'])
+
+'You selected: ', option
