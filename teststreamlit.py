@@ -1,6 +1,8 @@
-import streamlit as st
-st.header("this is the header")
-if st.button("say hello"):
-  st.write("Why i say hello to you")
-else:
-  st.write("Press the button")
+import streamlit as stf
+import pandas as pd
+
+df = pd.DataFrame({
+"First row":[122,200],
+"Second row":[999,888]
+})
+df
