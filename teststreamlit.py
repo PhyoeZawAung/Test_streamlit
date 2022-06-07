@@ -6,3 +6,4 @@ if st.checkbox("Show data frame"):
   np.random.randn(20,3),
   columns = ['a','b','c']
   )
+  df
