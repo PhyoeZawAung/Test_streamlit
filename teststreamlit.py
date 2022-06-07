@@ -6,7 +6,7 @@ import time
 # Add a placeholder
 latest_iteration = st.empty()
 bar = st.progress(0)
-if st.button("Click to work):
+if st.button("Click to work"):
              for i in range(100):
   # Update the progress bar with each iteration.
                 latest_iteration.text(f'Iteration {i+1}')
