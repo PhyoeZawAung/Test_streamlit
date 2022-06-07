@@ -6,5 +6,5 @@ with left:
         "Hello do you press me"
         
 with right:
-    data = st.radio("Choose the data",'mama','koko','mgmg')
+    data = st.radio("Choose the data",('mama','koko','mgmg'))
     print("You choose {data} love")
