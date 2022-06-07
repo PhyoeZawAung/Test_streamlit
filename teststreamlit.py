@@ -1,3 +1,8 @@
 import streamlit as st
-st.text_input("Enter name",key="name")
-st.session_state.name
+import pandas as pd
+import numpy as np
+if st.checkbox("Show data frame"):
+  df = pd.DataFrame(
+  np.random.randn(2,10),
+  column = ['a','b','c']
+  )
