@@ -7,4 +7,4 @@ with left:
         
 with right:
     data = st.radio("Choose the data",('mama','koko','mgmg'))
-    st.write("You choose {data} love")
+    st.write(f"You choose {data} love")
