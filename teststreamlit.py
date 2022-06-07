@@ -1,4 +1,9 @@
 import streamlit as st
 import numpy as np
-data = np.random.randn(100,100)
-st.dataframe(data)
+import pandas as pd
+
+dataframe = pd.DataFrame(
+    np.random.randn(10, 20),
+    columns=('col %d' % i for i in range(20)))
+
+st.dataframe(dataframe.style.highlight_max(axis=0))
