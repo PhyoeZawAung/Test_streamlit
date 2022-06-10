@@ -6,9 +6,9 @@ if messenger_file is not None:
   st.write(messenger_file.name)
   with ZipFile(messenger_file, 'r') as zip:
     zip.printdir()
-    st.write('Extracting all the files now...')
-    zip.extractall()
-    st.write('Done!')
+    ##st.write('Extracting all the files now...')
+    #zip.extractall()
+    #st.write('Done!')
 
   
 
