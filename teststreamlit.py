@@ -4,7 +4,7 @@ file = st.file_uploader("Chooose a file")
 if file is not None:
     st.write("file uploaded")
     # To convert to a string based IO:
-    stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
+    stringio = StringIO(file.getvalue().decode("utf-8"))
     st.write(stringio)
 
     # To read file as string:
