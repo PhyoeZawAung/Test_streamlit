@@ -9,7 +9,7 @@ if messenger_file is not None:
   stringio = StringIO(messenger_file.getvalue().decode("utf-8"))
   st.write(stringio)
   
-  bytes_data = uploaded_file.getvalue()
+  bytes_data = messenger_file.getvalue()
   st.write(bytes_data)
   
   
