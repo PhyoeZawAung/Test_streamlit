@@ -1,5 +1,6 @@
 import streamlit as st
-import os
+from io import stringIO
+import io
 messenger_file = st.file_uploader("Enter Your Messenger Dowmloaded file here",accept_multiple_files=True)
 if messenger_file is not None:
   for file in messenger_file:
