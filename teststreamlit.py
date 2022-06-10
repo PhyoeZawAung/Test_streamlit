@@ -4,7 +4,7 @@ messenger_file = st.file_uploader("Enter Your Messenger Dowmloaded file here")
 
 if messenger_file is not None:
   st.write(messenger_file.name)
-with ZipFile(messenger_file, 'r') as zip:
+  with ZipFile(messenger_file, 'r') as zip:
     # printing all the contents of the zip file
     zip.printdir() 
 
