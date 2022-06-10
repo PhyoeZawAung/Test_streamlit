@@ -6,10 +6,11 @@ messenger_file = st.file_uploader("Enter Your Messenger Dowmloaded file here")
 
 if messenger_file is not None:
   st.write(messenger_file.name)
-  stringio =messenger_file.getvalue()
-  st.write(stringio)
-  jsonData = json.loads(stringio)
+  jsonData = json.loads(messenger_file.getvalue())
   st.write(jsonData)
+  
+  
+  
   
   
   
