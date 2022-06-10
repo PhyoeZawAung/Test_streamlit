@@ -6,7 +6,7 @@ messenger_file = st.file_uploader("Enter Your Messenger Dowmloaded file here")
 
 if messenger_file is not None:
   st.write(messenger_file.name)
-  stringio = StringIO(messenger_file.getvalue().decode("utf-8"))
+  stringio =messenger_file.getvalue().decode("utf-8")
   st.write(stringio)
   
   bytes_data = messenger_file.getvalue()
