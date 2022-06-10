@@ -5,4 +5,4 @@ if messenger_file is not None:
   for file in messenger_file:
      bytes_data = file.read()
      st.write("filename:",file.name)
-     st.write(bytes_data)
+     
