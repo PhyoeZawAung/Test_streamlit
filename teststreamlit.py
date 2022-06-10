@@ -3,8 +3,12 @@ file = st.file_uploader("Chooose a file")
 
 if file is not None:
     st.write("file uploaded")
-    dataframe = pd.read_csv(file)
-    st.write(dataframe)
-    
+    # To convert to a string based IO:
+    stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
+    st.write(stringio)
+
+    # To read file as string:
+    string_data = stringio.read()
+    st.write(string_data)
 
 
