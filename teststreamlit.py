@@ -1,14 +1,9 @@
 import streamlit as st
-file = st.file_uploader("Chooose a file")
+from streamlit_jina import jina
+st.set_page_config(page_title="Jina Text Search",)
 
-if file is not None:
-    st.write("file uploaded")
-    # To convert to a string based IO:
-    stringio = StringIO(file.getvalue().decode("utf-8"))
-    st.write(stringio)
+endpoint = "http://0.0.0.0:45678/api/search" # This is Jina's default endpoint. If your Flow uses something different, switch it out
 
-    # To read file as string:
-    string_data = stringio.read()
-    st.write(string_data)
+st.title("Jina Text Search")
 
-
+jina.text_search(endpoint=endpoint)
