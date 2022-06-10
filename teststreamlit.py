@@ -6,17 +6,14 @@ messenger_file = st.file_uploader("Enter Your Messenger Dowmloaded file here")
 
 if messenger_file is not None:
   st.write(messenger_file.name)
-  stringio =messenger_file.getvalue().decode("utf-8")
+  stringio =messenger_file.getvalue()
   st.write(stringio)
   jsonData = json.loads(stringio)
   st.write(jsonData)
-  bytes_data = messenger_file.getvalue()
-  st.write(bytes_data)
   
   
-  with open(messenger_file.name,"r") as data:
-    mdata = json.load(data)
-    st.write(mdata)
+  
+ 
   #with ZipFile(messenger_file, 'r') as zip:
     #zip.printdir()
     ##st.write('Extracting all the files now...')
