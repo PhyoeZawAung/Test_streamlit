@@ -8,7 +8,8 @@ if messenger_file is not None:
   st.write(messenger_file.name)
   stringio =messenger_file.getvalue().decode("utf-8")
   st.write(stringio)
-  
+  jsonData = json.loads(stringio)
+  st.write(jsonData)
   bytes_data = messenger_file.getvalue()
   st.write(bytes_data)
   
