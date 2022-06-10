@@ -6,7 +6,7 @@ messenger_file = st.file_uploader("Enter Your Messenger Dowmloaded file here",ac
 
 if messenger_file is not None:
   for file in messenger_file:
-     bytes_data = file.read()
+     
      st.write("filename:",file.name)
      dataframe = pd.read_csv(file)
      st.write(dataframe)
