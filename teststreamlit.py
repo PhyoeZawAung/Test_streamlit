@@ -10,7 +10,7 @@ if messenger_file is not None:
   st.write(messenger_file.name)
   jsonData = json.loads(messenger_file.getvalue())
   
-for message in jsonData["messages"]:
+  for message in jsonData["messages"]:
                 try:
                     date = datetime.fromtimestamp(message["timestamp_ms"] / 1000).strftime("%Y-%m-%d %H:%M:%S")
                     sender = message["sender_name"]
