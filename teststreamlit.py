@@ -12,7 +12,9 @@ if messenger_file is not None:
   with ZipFile(messenger_file , "r") as archive:
     archive.printdir()
     st.write("Extracting all the file now")
+    print("Extracting all file now")
     allFile = archive.extractall()
+    print("Done")
     st.write("Done")
     st.write("all the extrected file are" , allFile)
     
@@ -26,20 +28,20 @@ for entry in obj:
 		print(entry.name)
 
 
-if  messenger_file is not None:
-  st.write(messenger_file.name)
-  jsonData = json.loads(messenger_file.getvalue())
+#if  messenger_file is not None:
+  #st.write(messenger_file.name)
+  #jsonData = json.loads(messenger_file.getvalue())
   
-  for message in jsonData["messages"]:
-                try:
-                    date = datetime.fromtimestamp(message["timestamp_ms"] / 1000).strftime("%Y-%m-%d %H:%M:%S")
-                    sender = message["sender_name"]
-                    content = message["content"]
-                    st.write("date     ,sender     ,content")
-                    st.write(date,"     " , sender ,"    ", content)
+  #for message in jsonData["messages"]:
+               # try:
+                    #date = datetime.fromtimestamp(message["timestamp_ms"] / 1000).strftime("%Y-%m-%d %H:%M:%S")
+                    #sender = message["sender_name"]
+                    #content = message["content"]
+                    #st.write("date     ,sender     ,content")
+                    #st.write(date,"     " , sender ,"    ", content)
 
-                except KeyError:
-                    pass
+                #except KeyError:
+                   # pass
   
   
   
