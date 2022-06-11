@@ -36,7 +36,7 @@ for file in files:
     if '.json' in file:
        print(file)
        parent = Path(file).parent
-       print(parent)
+       print("This is the parent " , parent)
        for entry in parent.iterdir():
         
         if entry is not None:
