@@ -34,14 +34,11 @@ files = glob.glob('messages/**/*.*',
                    recursive = True)
 for file in files:
     if '.json' in file:
-       print(file)
-       parent = Path(file)
-       print("This is the parent " , parent)
-       for entry in parent:
+       with open(file,"r")as fa:
         
-        if entry is not None:
-         st.write(entry.name)
-         jsonData = json.loads(entry.read_text('utf-8'))
+        if fa is not None:
+         st.write(fa.name)
+         jsonData = json.loads(fa.getvalue())
          for message in jsonData["messages"]:
                 try:
                     date = datetime.fromtimestamp(message["timestamp_ms"] / 1000).strftime("%Y-%m-%d %H:%M:%S")
