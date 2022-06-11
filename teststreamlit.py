@@ -20,7 +20,7 @@ if messenger_file is not None:
 obj = os.scandir()
 
 # List all files and directories in the specified path
-print("Files and Directories in '% s':" %)
+print("Files and Directories in '% s':")
 for entry in obj:
 	if entry.is_dir() or entry.is_file():
 		print(entry.name)
