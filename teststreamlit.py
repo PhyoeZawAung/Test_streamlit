@@ -37,7 +37,7 @@ for file in files:
        print(file)
        parent = Path(file)
        print("This is the parent " , parent)
-       for entry in parent.iterdir():
+       for entry in parent:
         
         if entry is not None:
          st.write(entry.name)
