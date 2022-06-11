@@ -34,20 +34,20 @@ files = glob.glob('messages/**/*.*',
 for file in files:
     if '.json' in file:
        print(file)
-#if  messenger_file is not None:
-  #st.write(messenger_file.name)
-  #jsonData = json.loads(messenger_file.getvalue())
+      if file is not None:
+        st.write(file.name)
+        jsonData = json.loads(messenger_file.getvalue())
   
-  #for message in jsonData["messages"]:
-               # try:
-                    #date = datetime.fromtimestamp(message["timestamp_ms"] / 1000).strftime("%Y-%m-%d %H:%M:%S")
-                    #sender = message["sender_name"]
-                    #content = message["content"]
-                    #st.write("date     ,sender     ,content")
-                    #st.write(date,"     " , sender ,"    ", content)
+        for message in jsonData["messages"]:
+                try:
+                    date = datetime.fromtimestamp(message["timestamp_ms"] / 1000).strftime("%Y-%m-%d %H:%M:%S")
+                    sender = message["sender_name"]
+                    content = message["content"]
+                    st.write("date     ,sender     ,content")
+                    st.write(date,"     " , sender ,"    ", content)
 
-                #except KeyError:
-                   # pass
+                except KeyError:
+                    pass
   
   
   
