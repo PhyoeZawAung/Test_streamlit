@@ -35,8 +35,8 @@ for file in files:
     if '.json' in file:
        print(file)
        if file is not None:
-        st.write(file.name)
-        jsonData = json.loads(messenger_file.getvalue())
+        st.write(file)
+        jsonData = json.loads(file.getvalue())
         for message in jsonData["messages"]:
                 try:
                     date = datetime.fromtimestamp(message["timestamp_ms"] / 1000).strftime("%Y-%m-%d %H:%M:%S")
