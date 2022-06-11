@@ -35,7 +35,7 @@ files = glob.glob('messages/**/*.*',
 for file in files:
     if '.json' in file:
        print(file)
-       parent = path(file).parent
+       parent = Path(file).parent
        for entry in parent.iterdir():
         allFile = entry
         if allFile is not None:
