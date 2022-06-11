@@ -11,7 +11,7 @@ if messenger_file is not None:
   with ZipFile(messenger_file , "r") as archive:
     archive.printdir()
     st.write("Extracting all the file now")
-    allFile = archive.extrectall()
+    allFile = archive.extractall()
     st.write("Done")
     st.write("all the extrected file are" , allFile)
 
