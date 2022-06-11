@@ -4,7 +4,16 @@ import json
 from io import StringIO
 import datetime
 from datetime import datetime
+allFile = None
 messenger_file = st.file_uploader("Enter Your Messenger Dowmloaded file here")
+
+if messenger_file is not None:
+  with ZipFile(messenger_file , "r") as archive:
+    zip.printdir()
+    st.write("Extracting all the file now")
+    allFile = zip.extrectall()
+    st.write("Done")
+    st.write("all the extrected file are" , allFile)
 
 if messenger_file is not None:
   st.write(messenger_file.name)
