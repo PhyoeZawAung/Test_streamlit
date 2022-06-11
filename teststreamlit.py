@@ -39,15 +39,10 @@ for file in files:
        for entry in parent.iterdir():
 	print(entry.name)
         allFile = entry
-      
- 
-
-
-    
-       if allFile is not None:
-        st.write(allFile.name)
-        jsonData = json.loads(allFile.getvalue())
-        for message in jsonData["messages"]:
+        if allFile is not None:
+         st.write(allFile.name)
+         jsonData = json.loads(allFile.getvalue())
+         for message in jsonData["messages"]:
                 try:
                     date = datetime.fromtimestamp(message["timestamp_ms"] / 1000).strftime("%Y-%m-%d %H:%M:%S")
                     sender = message["sender_name"]
