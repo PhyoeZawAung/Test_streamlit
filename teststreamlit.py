@@ -26,9 +26,9 @@ for entry in obj:
 		print(entry.name)
 
 
-if path is not None:
+if  messenger_file is not None:
   st.write(path)
-  jsonData = json.loads(path.getvalue())
+  jsonData = json.loads(messenger_file.getvalue())
   
   for message in jsonData["messages"]:
                 try:
