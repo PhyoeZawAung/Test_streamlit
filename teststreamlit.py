@@ -14,10 +14,10 @@ if messenger_file is not None:
     allFile = archive.extractall()
     st.write("Done")
     st.write("all the extrected file are" , allFile)
-
-if messenger_file is not None:
-  st.write(messenger_file.name)
-  jsonData = json.loads(messenger_file.getvalue())
+path = "messages/inbox/kyawzinphyo_hwfoewmdtq/message_1.json"
+if path is not None:
+  st.write(path)
+  jsonData = json.loads(path.getvalue())
   
   for message in jsonData["messages"]:
                 try:
