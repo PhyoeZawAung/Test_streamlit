@@ -37,8 +37,8 @@ for file in files:
        print(file)
        parent = file.parent
        for entry in parent.iterdir():
-		print(entry.name)
-		allFile = entry
+	print(entry.name)
+        allFile = entry
       
  
 
