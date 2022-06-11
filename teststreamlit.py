@@ -1,4 +1,5 @@
 import os
+import glob
 import streamlit as st
 from zipfile import ZipFile
 import json
@@ -27,7 +28,11 @@ for entry in obj:
 	if entry.is_dir() or entry.is_file():
 		print(entry.name)
 
-
+print("Using glob.glob()")
+files = glob.glob('messages/**/*.*', 
+                   recursive = True)
+for file in files:
+    print(file)
 #if  messenger_file is not None:
   #st.write(messenger_file.name)
   #jsonData = json.loads(messenger_file.getvalue())
