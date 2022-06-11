@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 from zipfile import ZipFile
 import json
@@ -14,7 +15,17 @@ if messenger_file is not None:
     allFile = archive.extractall()
     st.write("Done")
     st.write("all the extrected file are" , allFile)
-path = "messages/inbox/kyawzinphyo_hwfoewmdtq/message_1.json"
+    
+
+obj = os.scandir()
+
+# List all files and directories in the specified path
+print("Files and Directories in '% s':" %)
+for entry in obj:
+	if entry.is_dir() or entry.is_file():
+		print(entry.name)
+
+
 if path is not None:
   st.write(path)
   jsonData = json.loads(path.getvalue())
