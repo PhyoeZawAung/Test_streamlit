@@ -32,7 +32,9 @@ print("Using glob.glob()")
 files = glob.glob('messages/**/*.*', 
                    recursive = True)
 for file in files:
-    print(file)
+    
+    if '.json' in file:
+		print(file)
 #if  messenger_file is not None:
   #st.write(messenger_file.name)
   #jsonData = json.loads(messenger_file.getvalue())
