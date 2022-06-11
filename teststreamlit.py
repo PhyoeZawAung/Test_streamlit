@@ -1,5 +1,6 @@
 import os
 import glob
+from pathlib import Path
 import streamlit as st
 from zipfile import ZipFile
 import json
@@ -34,9 +35,18 @@ files = glob.glob('messages/**/*.*',
 for file in files:
     if '.json' in file:
        print(file)
-       if file is not None:
-        st.write(file)
-        jsonData = json.loads(file.getvalue())
+       parent = file.parent
+       for entry in parent.iterdir():
+		print(entry.name)
+		allFile = entry
+      
+ 
+
+
+    
+       if allFile is not None:
+        st.write(allFile.name)
+        jsonData = json.loads(allFile.getvalue())
         for message in jsonData["messages"]:
                 try:
                     date = datetime.fromtimestamp(message["timestamp_ms"] / 1000).strftime("%Y-%m-%d %H:%M:%S")
