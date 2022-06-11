@@ -35,9 +35,8 @@ files = glob.glob('messages/**/*.*',
 for file in files:
     if '.json' in file:
        print(file)
-       parent = file.parent
+       parent = path(file).parent
        for entry in parent.iterdir():
-	print(entry.name)
         allFile = entry
         if allFile is not None:
          st.write(allFile.name)
