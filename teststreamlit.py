@@ -9,9 +9,9 @@ messenger_file = st.file_uploader("Enter Your Messenger Dowmloaded file here")
 
 if messenger_file is not None:
   with ZipFile(messenger_file , "r") as archive:
-    zip.printdir()
+    archive.printdir()
     st.write("Extracting all the file now")
-    allFile = zip.extrectall()
+    allFile = archive.extrectall()
     st.write("Done")
     st.write("all the extrected file are" , allFile)
 
