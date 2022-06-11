@@ -36,11 +36,12 @@ for file in files:
     if '.json' in file:
        print(file)
        parent = Path(file).parent
+       print(parent)
        for entry in parent.iterdir():
-        allFile = entry
-        if allFile is not None:
-         st.write(allFile.name)
-         jsonData = json.loads(allFile.read_text('utf-8'))
+        
+        if entry is not None:
+         st.write(entry.name)
+         jsonData = json.loads(entry.read_text('utf-8'))
          for message in jsonData["messages"]:
                 try:
                     date = datetime.fromtimestamp(message["timestamp_ms"] / 1000).strftime("%Y-%m-%d %H:%M:%S")
