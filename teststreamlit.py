@@ -38,6 +38,8 @@ for file in files:
         
         if fa is not None:
          st.write(fa.name)
+	 bytes_data = fa.getvalue()
+         st.write(bytes_data)
          jsonData = json.loads(fa.getvalue())
          for message in jsonData["messages"]:
                 try:
